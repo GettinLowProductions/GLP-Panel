@@ -54,3 +54,15 @@ upgrades never touch your server data.
 
 Found a bug or want a feature? Open an **Issue** — the panel is actively
 developed and community feedback shapes the roadmap.
+## License
+
+GLP Panel is **free to use** — download it, host your servers, invite
+your friends. It is **not open source**: the code is public for
+transparency, but it may not be redistributed, modified, rebranded, or
+sold. See [LICENSE](LICENSE) for the full terms.
+
+**Only download GLP Panel from this repository's
+[Releases](https://github.com/GettinLowProductions/GLP-Panel/releases)
+page.** Copies from anywhere else are unofficial and may be unsafe.
+
+© 2026 Gettin' Low Productions
