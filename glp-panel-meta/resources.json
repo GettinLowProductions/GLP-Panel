@@ -1,0 +1,15 @@
+{
+  "articles": {
+    "dayz-types-xml-loot-spawning-explained": [
+      { "label": "DayZ Central Economy files (official reference)", "url": "https://github.com/BohemiaInteractive/DayZ-Central-Economy" },
+      { "label": "dzconfig — visual types.xml editor", "url": "https://dzconfig.com" }
+    ],
+    "serverdz-cfg-the-dayz-server-s-identity": [
+      { "label": "Bohemia wiki: DayZ server configuration", "url": "https://community.bistudio.com/wiki/DayZ:Server_Configuration" }
+    ],
+    "finding-dayz-arma-mods-on-the-steam-workshop": [
+      { "label": "DayZ Workshop on Steam", "url": "https://steamcommunity.com/app/221100/workshop/" },
+      { "label": "DZSA tools and server list", "url": "https://dayzsalauncher.com" }
+    ]
+  }
+}
