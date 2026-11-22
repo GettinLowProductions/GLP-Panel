@@ -8,7 +8,7 @@ Static page for GitHub Pages. No build step. Open `index.html` as-is.
 2. Set GitHub Pages to that branch, folder `/` (root).
 3. The page is then at https://gettinlowproductions.github.io/GLP-Panel/
 
-Do not add a custom domain. Do not add a CNAME file. Do not change DNS. This page stays on GitHub Pages, separate from playglp.com.
+Do not add a custom domain. Do not add a CNAME file. Do not change DNS. This page stays on GitHub Pages, separate from the main website.
 
 `main` stays the installers and the project README. This page belongs on `gh-pages`.
 

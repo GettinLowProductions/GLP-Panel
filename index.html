@@ -4,18 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>GLP Server Panel</title>
-  <meta name="description" content="Host game servers from your own PC. GLP Server Panel is a free Windows app from Gettin' Low Productions.">
+  <meta name="description" content="Your games. Your servers. Your rules. Ever wanted to host your own game server without paying a monthly hosting fee or spending hours figuring out how to set everything up?">
   <link rel="canonical" href="https://gettinlowproductions.github.io/GLP-Panel/">
   <meta property="og:site_name" content="Gettin' Low Productions">
   <meta property="og:title" content="GLP Server Panel">
-  <meta property="og:description" content="Host game servers from your own PC. GLP Server Panel is a free Windows app from Gettin' Low Productions.">
+  <meta property="og:description" content="Your games. Your servers. Your rules. Ever wanted to host your own game server without paying a monthly hosting fee or spending hours figuring out how to set everything up?">
   <meta property="og:url" content="https://gettinlowproductions.github.io/GLP-Panel/">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://gettinlowproductions.github.io/GLP-Panel/assets/glp.jpg">
   <meta property="og:image:alt" content="Gettin' Low Productions">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="GLP Server Panel">
-  <meta name="twitter:description" content="Host game servers from your own PC. GLP Server Panel is a free Windows app from Gettin' Low Productions.">
+  <meta name="twitter:description" content="Your games. Your servers. Your rules. Ever wanted to host your own game server without paying a monthly hosting fee or spending hours figuring out how to set everything up?">
   <meta name="twitter:image" content="https://gettinlowproductions.github.io/GLP-Panel/assets/glp.jpg">
   <meta name="theme-color" content="#2dd4bf">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,30 +33,26 @@
   <div class="bg" aria-hidden="true"></div>
   <header class="site-header">
     <div class="nav-inner">
-      <a class="logo" href="https://playglp.com/">
+      <a class="logo" href="index.html">
         <img src="assets/glp-mark.png" width="32" height="32" alt="">
         <span class="logo-full">Gettin' Low Productions</span>
         <span class="logo-short">GLP</span>
       </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
-      <nav id="site-nav" aria-label="Primary">
-        <a href="https://playglp.com/">Home</a>
-        <a href="index.html" aria-current="page">Server Panel</a>
-        <a href="https://playglp.com/help.html">Help</a>
-        <a href="https://playglp.com/about.html">About</a>
-      </nav>
     </div>
   </header>
 
   <main id="main">
     <section class="hero wrap" aria-labelledby="page-title">
       <div class="hero-inner">
-        <p class="kicker">Windows</p>
         <h1 id="page-title">GLP Server Panel</h1>
-        <p class="lede">Host game servers from your own PC.</p>
+        <p class="lede">Your games. Your servers. Your rules.</p>
+        <p>Ever wanted to host your own game server without paying a monthly hosting fee or spending hours figuring out how to set everything up?</p>
+        <p>That's exactly why we built GLP Server Panel.</p>
+        <p>Turn your Windows PC into a game server host, manage multiple games from one place, and invite your friends to play. Whether you're setting up your first Minecraft world or managing a heavily modded DayZ server, we've made the process as straightforward as possible.</p>
+        <p>Free to use. No subscriptions. Your hardware, your data, your control.</p>
         <div class="actions">
           <a class="btn btn-primary" id="download-btn" href="https://github.com/CarterCanDo/GLP-Server-Panel-Releases/releases/latest">Download for Windows<span id="download-version"></span></a>
-          <a class="btn btn-secondary" id="all-releases" href="https://github.com/CarterCanDo/GLP-Server-Panel-Releases/releases">All releases</a>
+          <a class="btn btn-secondary" id="all-releases" href="https://github.com/CarterCanDo/GLP-Server-Panel-Releases/releases">View All Releases</a>
         </div>
         <div class="hero-stat">
           <p class="kicker">Downloads</p>
@@ -66,63 +62,89 @@
       </div>
     </section>
 
-    <section class="section tight" aria-labelledby="what-title">
+    <section class="section tight" aria-labelledby="need-title">
       <div class="wrap">
         <div class="card">
-          <p class="kicker">What it is</p>
-          <h2 id="what-title">One installer on your PC</h2>
-          <p>The panel sets up what each game needs: the right Java version, SteamCMD, server files, and Workshop mods with their dependencies and signing keys. A Go Live checklist covers the firewall, the router, and a free stable address so friends can join.</p>
-          <p>It is free and self-hosted. Your hardware, your servers, your data. Windows only.</p>
+          <h2 id="need-title">Everything you need, in one place</h2>
+          <p>Setting up a game server shouldn't feel like a second job.</p>
+          <p>GLP Server Panel takes care of much of the technical setup for you. It can install the tools your games need, download server files, manage mods and dependencies, and help get your server ready for other players.</p>
+          <p>No jumping between a dozen different programs just to get things running.</p>
+          <p>And when it's time to invite your friends, our Go Live checklist walks you through the networking side of things, too.</p>
         </div>
       </div>
     </section>
 
     <section class="section tight" aria-labelledby="games-title">
       <div class="wrap">
-        <p class="kicker">Games</p>
-        <h2 id="games-title">What you can host</h2>
+        <h2 id="games-title">Play what you want</h2>
         <div class="product-grid">
           <div class="card">
-            <h3>Minecraft Java</h3>
-            <p>One-click Fabric. Search mods in the panel on Modrinth and CurseForge. Dependencies are resolved, and files are checked with SHA-1.</p>
+            <h3>Minecraft Java Edition</h3>
+            <p>Want to build a modded Minecraft world? Set up Fabric with a click, browse mods directly through Modrinth and CurseForge, and let the panel help handle dependencies and file verification.</p>
+            <p>Spend less time sorting through mod files and more time actually playing.</p>
           </div>
           <div class="card">
-            <h3>DayZ / Arma 3</h3>
-            <p>Search the Workshop in the panel, or paste a link. Required items are pulled in. Keys and load order are handled.</p>
+            <h3>DayZ &amp; Arma 3</h3>
+            <p>Running a modded survival or military server doesn't have to be a headache.</p>
+            <p>Search the Steam Workshop right from the panel or paste in a Workshop link. GLP Server Panel helps download the required content, organize dependencies, manage signing keys, and handle mod load order.</p>
           </div>
           <div class="card">
-            <h3>Other games</h3>
-            <p>Start from a generic SteamCMD template, or write your own JSON template.</p>
+            <h3>Other Steam games</h3>
+            <p>Not seeing your game listed?</p>
+            <p>You can use a generic SteamCMD template or create your own JSON template to set up additional dedicated servers.</p>
+            <p>We're not trying to limit what you can host.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section tight" aria-labelledby="run-title">
+    <section class="section tight" aria-labelledby="control-title">
       <div class="wrap">
         <div class="card">
-          <p class="kicker">Running servers</p>
-          <h2 id="run-title">While a server is up</h2>
+          <h2 id="control-title">Stay in control without the hassle</h2>
+          <p>Getting a server running is only half the job. Keeping it running smoothly matters just as much.</p>
+          <p>GLP Server Panel gives you the tools to manage your servers without constantly digging through folders or switching between applications.</p>
           <ul>
-            <li>Live console with commands.</li>
-            <li>RCON player list, kick, and broadcast for BattlEye and Minecraft.</li>
-            <li>RAM and CPU caps for each server, plus live stats.</li>
-            <li>Scheduled restarts.</li>
-            <li>Crash detection, with a Discord notification.</li>
-            <li>Backups and restore.</li>
-            <li>File manager, and config editors that check JSON and XML.</li>
+            <li>Live console: See what's happening on your server and send commands directly.</li>
+            <li>Player management: View connected players, kick players, and send announcements through supported RCON systems.</li>
+            <li>Performance controls: Monitor resource usage and set CPU and memory limits for individual servers.</li>
+            <li>Automatic restarts: Schedule restarts around your players instead of remembering to do them yourself.</li>
+            <li>Crash detection: Know when something goes wrong, with optional Discord notifications.</li>
+            <li>Backups and recovery: Back up your server data and restore it when needed.</li>
+            <li>File management: Browse files and edit configurations directly, with built-in checks for JSON and XML.</li>
           </ul>
+          <p>Whether you're running one small server for friends or several different worlds, everything is accessible from the same panel.</p>
         </div>
       </div>
     </section>
 
-    <section class="section tight" aria-labelledby="friends-title">
+    <section class="section tight" aria-labelledby="machines-title">
       <div class="wrap">
         <div class="card">
-          <p class="kicker">Playing with friends</p>
-          <h2 id="friends-title">More than one PC</h2>
-          <p>A friend's PC, or a rented VPS, joins as a node with the setup wizard. First launch asks one question: host here, join a friend's panel, or connect to a panel that already exists.</p>
-          <p>You set each person's access, from full admin to view-only, per server and per capability. Team chat can share files and GIFs. Remote access is through Tailscale (recommended) or direct HTTPS, with login rate limiting and an audit log.</p>
+          <h2 id="machines-title">More than one computer? No problem.</h2>
+          <p>Maybe you've got an old PC sitting around. Maybe a friend wants to contribute some hardware. Or perhaps you've rented a VPS and want to manage it alongside your home servers.</p>
+          <p>GLP Server Panel lets you bring those machines together.</p>
+          <p>When you launch the panel for the first time, you can choose to host locally, join a friend's setup, or connect to an existing panel.</p>
+          <p>From there, you can manage connected machines and decide exactly what other people are allowed to access.</p>
+          <p>Give a trusted friend administrative control, let someone manage only a particular server, or provide view-only access.</p>
+          <p>There's even built-in team chat with support for sharing files and GIFs.</p>
+          <p>For remote connections, you can use Tailscale or direct HTTPS, with security features including login rate limiting and activity logs.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tight" aria-labelledby="connect-title">
+      <div class="wrap">
+        <div class="card">
+          <h2 id="connect-title">Getting your friends connected shouldn't be complicated</h2>
+          <p>Port forwarding, firewall rules, IP addresses... if you've never hosted a server before, networking can be one of the most frustrating parts.</p>
+          <p>We wanted to make that easier.</p>
+          <p>The Go Live checklist helps you work through the process, including Windows Firewall permissions, router configuration, and setting up a free DuckDNS address.</p>
+          <p>Where supported, the panel can configure port forwarding automatically. If your router needs manual setup, we'll help guide you through it.</p>
+          <p>Can't port forward? You still have options.</p>
+          <p>GLP Server Panel also supports sharing through playit, giving you another way to make your server accessible.</p>
+          <p>You'll be guided through any required account approval, and once your public address is ready, you can copy it and share it with your friends.</p>
+          <p>The goal is simple: less troubleshooting, more playing.</p>
         </div>
       </div>
     </section>
@@ -130,17 +152,12 @@
     <section class="section tight" aria-labelledby="help-title">
       <div class="wrap">
         <div class="card">
-          <p class="kicker">Beginner help</p>
-          <h2 id="help-title">Help, Go Live, and sharing</h2>
-          <p>Help &amp; FAQ walks through firewalls, routers, port forwarding, and what is safe to click. The Go Live checklist does the hard parts: a firewall rule after one prompt, UPnP port forwarding with a manual fallback, a free DuckDNS address, and an invite friends can copy.</p>
-          <h3>Share without port forwarding</h3>
-          <p>After you approve the link, the panel leaves the waiting message and shows what is actually going on. If playit still needs you to confirm the email on that account, that message stays until you do. When a public address is ready, it is shown with a copy button.</p>
-          <p>Sharing uses the same ports Go Live lists, including extra ports a game opens beside its main one. That works while the server is stopped. Turning sharing on for another server uses the link you already approved.</p>
-        </div>
-        <div class="card">
-          <h3>Bug reports</h3>
-          <p>Help includes a bug report page. Write what happened, then press Send bug report. The note can be long. Recent logs from this PC and the list of servers are included. Passwords, tokens, and network addresses are removed on this PC before the report goes out. If it cannot be sent, the panel says so.</p>
-          <p>You can also open an issue on the project.</p>
+          <h2 id="help-title">Need a hand? We've got you.</h2>
+          <p>Not everyone is a network engineer, and you shouldn't need to be one to host a game server.</p>
+          <p>Our built-in Help &amp; FAQ section explains common setup problems, networking questions, and the things you should know before making changes.</p>
+          <p>And if something isn't working the way it should, you can send a bug report directly from the panel.</p>
+          <p>Tell us what happened, and the panel can include relevant diagnostic information to help us investigate. Sensitive information such as passwords, tokens, and network addresses is filtered locally before the report is sent.</p>
+          <p>If the report can't be delivered, we'll tell you rather than leaving you wondering.</p>
         </div>
       </div>
     </section>
@@ -148,30 +165,43 @@
     <section class="section tight" aria-labelledby="updates-title">
       <div class="wrap">
         <div class="card">
-          <p class="kicker">Updates</p>
-          <h2 id="updates-title">Your worlds stay put</h2>
-          <p>The installer adds shortcuts, firewall pre-authorization, and the WebView2 runtime. Upgrades do not touch your server data. Settings, servers, worlds, and sign-in are kept when you update.</p>
+          <h2 id="updates-title">Update the panel, not your whole setup</h2>
+          <p>Nobody wants to lose a carefully built world because they updated an application.</p>
+          <p>GLP Server Panel is designed to keep your existing servers, worlds, settings, and sign-in information intact when you install an update.</p>
+          <p>Your worlds belong to you. Updating the software shouldn't mean starting over.</p>
         </div>
       </div>
     </section>
 
-    <section class="section tight" aria-labelledby="license-title">
+    <section class="section tight" aria-labelledby="free-title">
       <div class="wrap">
         <div class="card">
-          <p class="kicker">License</p>
-          <h2 id="license-title">Free to use. Not open source.</h2>
-          <p>Download it, host your servers, and invite your friends. The code is public for transparency. It may not be redistributed, modified, rebranded, or sold.</p>
-          <p>Only download GLP Server Panel from the official releases. Copies from anywhere else are unofficial and may be unsafe.</p>
+          <h2 id="free-title">Free to use. Built for the people who play.</h2>
+          <p>We believe hosting your own game server should be accessible without committing to another monthly subscription.</p>
+          <p>GLP Server Panel is free to download and use on your own Windows hardware.</p>
+          <p>You decide what to host, who gets access, and how your servers are managed.</p>
+          <p>A quick note about licensing: GLP Server Panel is free to use, but it isn't open-source software. Redistribution, modification, rebranding, and resale are restricted by its license.</p>
+          <p>For your security, always download the panel from our official GitHub releases.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tight" aria-labelledby="ready-title">
+      <div class="wrap">
+        <div class="card">
+          <h2 id="ready-title">Ready to host your own server?</h2>
+          <p>Whether you're building a Minecraft world with a few friends, running a DayZ community, or experimenting with your own dedicated servers, GLP Server Panel gives you a place to start.</p>
+          <p>Your PC. Your community. Your adventure.</p>
+          <div class="actions cta-actions">
+            <a class="btn btn-primary" id="download-btn-cta" href="https://github.com/CarterCanDo/GLP-Server-Panel-Releases/releases/latest">Download GLP Server Panel for Windows</a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="footer-brand">© 2026 Gettin' Low Productions</div>
-    <div class="footer-links">
-      <a href="https://playglp.com/">playglp.com</a>
-    </div>
+    <div class="footer-brand">Made by Gettin' Low Productions.</div>
   </footer>
   <script src="js/border-light.js"></script>
   <script src="js/downloads.js"></script>

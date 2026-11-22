@@ -78,3 +78,26 @@ h1, h2, h3, p, li, a {
     margin-top: 22px;
   }
 }
+
+.hero-inner p {
+  margin: 0 0 14px;
+  max-width: 40rem;
+}
+
+.hero-inner .lede {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.hero-inner .actions {
+  margin-top: 6px;
+}
+
+.cta-actions {
+  margin-top: 18px;
+}
+
+.site-footer .footer-brand {
+  margin-bottom: 0;
+}

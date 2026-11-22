@@ -116,9 +116,11 @@
   }
 
   function setHref(url) {
-    var btn = document.getElementById("download-btn");
-    if (!btn || !url) return;
-    btn.href = url;
+    if (!url) return;
+    var nodes = document.querySelectorAll("#download-btn, #download-btn-cta");
+    for (var i = 0; i < nodes.length; i++) {
+      nodes[i].href = url;
+    }
   }
 
   function setAllReleases(repo) {
