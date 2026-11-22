@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GLP Server Panel</title>
+  <meta name="description" content="Host game servers from your own PC. GLP Server Panel is a free Windows app from Gettin' Low Productions.">
+  <link rel="canonical" href="https://gettinlowproductions.github.io/GLP-Panel/">
+  <meta property="og:site_name" content="Gettin' Low Productions">
+  <meta property="og:title" content="GLP Server Panel">
+  <meta property="og:description" content="Host game servers from your own PC. GLP Server Panel is a free Windows app from Gettin' Low Productions.">
+  <meta property="og:url" content="https://gettinlowproductions.github.io/GLP-Panel/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://gettinlowproductions.github.io/GLP-Panel/assets/glp.jpg">
+  <meta property="og:image:alt" content="Gettin' Low Productions">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="GLP Server Panel">
+  <meta name="twitter:description" content="Host game servers from your own PC. GLP Server Panel is a free Windows app from Gettin' Low Productions.">
+  <meta name="twitter:image" content="https://gettinlowproductions.github.io/GLP-Panel/assets/glp.jpg">
+  <meta name="theme-color" content="#2dd4bf">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/jpeg" href="assets/glp.jpg">
+  <link rel="apple-touch-icon" href="assets/glp.jpg">
+  <link rel="stylesheet" href="css/preview.css">
+  <link rel="stylesheet" href="css/retheme.css">
+  <link rel="stylesheet" href="css/retheme-pages.css">
+  <link rel="stylesheet" href="css/panel.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="bg" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="logo" href="https://playglp.com/">
+        <img src="assets/glp-mark.png" width="32" height="32" alt="">
+        <span class="logo-full">Gettin' Low Productions</span>
+        <span class="logo-short">GLP</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" aria-label="Primary">
+        <a href="https://playglp.com/">Home</a>
+        <a href="index.html" aria-current="page">Server Panel</a>
+        <a href="https://playglp.com/help.html">Help</a>
+        <a href="https://playglp.com/about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="page-title">
+      <div class="hero-inner">
+        <p class="kicker">Windows</p>
+        <h1 id="page-title">GLP Server Panel</h1>
+        <p class="lede">Host game servers from your own PC.</p>
+        <div class="actions">
+          <a class="btn btn-primary" id="download-btn" href="https://github.com/CarterCanDo/GLP-Server-Panel-Releases/releases/latest">Download for Windows<span id="download-version"></span></a>
+          <a class="btn btn-secondary" id="all-releases" href="https://github.com/CarterCanDo/GLP-Server-Panel-Releases/releases">All releases</a>
+        </div>
+        <div class="hero-stat">
+          <p class="kicker">Downloads</p>
+          <p class="dl-count" id="download-count" aria-live="polite"><a href="https://github.com/CarterCanDo/GLP-Server-Panel-Releases/releases">See downloads on GitHub</a></p>
+          <p class="lede dl-note">GitHub counts every download of the Windows installer, including copies the panel downloads when it updates.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tight" aria-labelledby="what-title">
+      <div class="wrap">
+        <div class="card">
+          <p class="kicker">What it is</p>
+          <h2 id="what-title">One installer on your PC</h2>
+          <p>The panel sets up what each game needs: the right Java version, SteamCMD, server files, and Workshop mods with their dependencies and signing keys. A Go Live checklist covers the firewall, the router, and a free stable address so friends can join.</p>
+          <p>It is free and self-hosted. Your hardware, your servers, your data. Windows only.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tight" aria-labelledby="games-title">
+      <div class="wrap">
+        <p class="kicker">Games</p>
+        <h2 id="games-title">What you can host</h2>
+        <div class="product-grid">
+          <div class="card">
+            <h3>Minecraft Java</h3>
+            <p>One-click Fabric. Search mods in the panel on Modrinth and CurseForge. Dependencies are resolved, and files are checked with SHA-1.</p>
+          </div>
+          <div class="card">
+            <h3>DayZ / Arma 3</h3>
+            <p>Search the Workshop in the panel, or paste a link. Required items are pulled in. Keys and load order are handled.</p>
+          </div>
+          <div class="card">
+            <h3>Other games</h3>
+            <p>Start from a generic SteamCMD template, or write your own JSON template.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tight" aria-labelledby="run-title">
+      <div class="wrap">
+        <div class="card">
+          <p class="kicker">Running servers</p>
+          <h2 id="run-title">While a server is up</h2>
+          <ul>
+            <li>Live console with commands.</li>
+            <li>RCON player list, kick, and broadcast for BattlEye and Minecraft.</li>
+            <li>RAM and CPU caps for each server, plus live stats.</li>
+            <li>Scheduled restarts.</li>
+            <li>Crash detection, with a Discord notification.</li>
+            <li>Backups and restore.</li>
+            <li>File manager, and config editors that check JSON and XML.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tight" aria-labelledby="friends-title">
+      <div class="wrap">
+        <div class="card">
+          <p class="kicker">Playing with friends</p>
+          <h2 id="friends-title">More than one PC</h2>
+          <p>A friend's PC, or a rented VPS, joins as a node with the setup wizard. First launch asks one question: host here, join a friend's panel, or connect to a panel that already exists.</p>
+          <p>You set each person's access, from full admin to view-only, per server and per capability. Team chat can share files and GIFs. Remote access is through Tailscale (recommended) or direct HTTPS, with login rate limiting and an audit log.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tight" aria-labelledby="help-title">
+      <div class="wrap">
+        <div class="card">
+          <p class="kicker">Beginner help</p>
+          <h2 id="help-title">Help, Go Live, and sharing</h2>
+          <p>Help &amp; FAQ walks through firewalls, routers, port forwarding, and what is safe to click. The Go Live checklist does the hard parts: a firewall rule after one prompt, UPnP port forwarding with a manual fallback, a free DuckDNS address, and an invite friends can copy.</p>
+          <h3>Share without port forwarding</h3>
+          <p>After you approve the link, the panel leaves the waiting message and shows what is actually going on. If playit still needs you to confirm the email on that account, that message stays until you do. When a public address is ready, it is shown with a copy button.</p>
+          <p>Sharing uses the same ports Go Live lists, including extra ports a game opens beside its main one. That works while the server is stopped. Turning sharing on for another server uses the link you already approved.</p>
+        </div>
+        <div class="card">
+          <h3>Bug reports</h3>
+          <p>Help includes a bug report page. Write what happened, then press Send bug report. The note can be long. Recent logs from this PC and the list of servers are included. Passwords, tokens, and network addresses are removed on this PC before the report goes out. If it cannot be sent, the panel says so.</p>
+          <p>You can also open an issue on the project.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tight" aria-labelledby="updates-title">
+      <div class="wrap">
+        <div class="card">
+          <p class="kicker">Updates</p>
+          <h2 id="updates-title">Your worlds stay put</h2>
+          <p>The installer adds shortcuts, firewall pre-authorization, and the WebView2 runtime. Upgrades do not touch your server data. Settings, servers, worlds, and sign-in are kept when you update.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tight" aria-labelledby="license-title">
+      <div class="wrap">
+        <div class="card">
+          <p class="kicker">License</p>
+          <h2 id="license-title">Free to use. Not open source.</h2>
+          <p>Download it, host your servers, and invite your friends. The code is public for transparency. It may not be redistributed, modified, rebranded, or sold.</p>
+          <p>Only download GLP Server Panel from the official releases. Copies from anywhere else are unofficial and may be unsafe.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">© 2026 Gettin' Low Productions</div>
+    <div class="footer-links">
+      <a href="https://playglp.com/">playglp.com</a>
+    </div>
+  </footer>
+  <script src="js/border-light.js"></script>
+  <script src="js/downloads.js"></script>
+</body>
+</html>

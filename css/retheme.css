@@ -1,0 +1,383 @@
+/* Preview v2b — clear neutral glass; product color only in the border light. Not for production. */
+
+:root {
+  --gl-1: #2DD4BF;
+  --gl-2: #2DD4BF;
+  --gl-3: #2DD4BF;
+  --gl-radius: 200px;
+  --gl-border-w: 2.5px;
+  --glass-fill: rgba(255, 255, 255, 0.055);
+  --glass-fill-btn: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-spec: inset 0 1px 0 rgba(255, 255, 255, 0.28),
+                inset 0 -1px 0 rgba(255, 255, 255, 0.05),
+                inset 0 0 16px rgba(255, 255, 255, 0.045);
+  --label: #f1f5f9;
+}
+
+/* ---- Addendum 1: dashboard heading gradients (do not flatten) ---- */
+[data-product="support"],
+#paths,
+#builder,
+.stage.support,
+.chip[href="support.html"],
+.footer-links a[href="support.html"],
+.dropdown a[href="support.html"] {
+  --gl-1: #475569;
+  --gl-2: #CBD5E1;
+  --gl-3: #FFFFFF;
+}
+[data-product="understudy"],
+.stage.manage,
+.chip[href="understudy.html"],
+.footer-links a[href="understudy.html"],
+.dropdown a[href="understudy.html"] {
+  --gl-1: #7DD3FC;
+  --gl-2: #38BDF8;
+  --gl-3: #2563EB;
+}
+[data-product="prompter"],
+#proof,
+.pdemo-stage,
+.stage.talk,
+.chip[href="prompter.html"],
+.footer-links a[href="prompter.html"],
+.dropdown a[href="prompter.html"] {
+  --gl-1: #CCFBF1;
+  --gl-2: #2DD4BF;
+  --gl-3: #115E59;
+}
+[data-product="ensemble"],
+.edemo-root,
+.stage.host,
+.chip[href="ensemble.html"],
+.footer-links a[href="ensemble.html"],
+.dropdown a[href="ensemble.html"] {
+  --gl-1: #FEF3C7;
+  --gl-2: #FBBF24;
+  --gl-3: #92400E;
+  --gl-4: #F59E0B;
+}
+[data-product="gaming_lounge"],
+[data-product="gaming-lounge"],
+.stage.play,
+.chip[href="gaming-lounge.html"],
+.footer-links a[href="gaming-lounge.html"],
+.dropdown a[href="gaming-lounge.html"] {
+  --gl-1: #00F0FF;
+  --gl-2: #8B5CF6;
+  --gl-3: #FF2EC8;
+}
+
+/* ---- Visible backdrop so glass can frost something ---- */
+.bg {
+  background:
+    radial-gradient(ellipse 70% 50% at 12% 14%, rgba(148, 163, 184, 0.07) 0%, transparent 62%),
+    radial-gradient(ellipse 55% 42% at 88% 8%, rgba(139, 92, 246, 0.055) 0%, transparent 58%),
+    radial-gradient(ellipse 48% 36% at 82% 88%, rgba(245, 158, 11, 0.045) 0%, transparent 60%),
+    radial-gradient(ellipse 42% 32% at 16% 82%, rgba(56, 189, 248, 0.05) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 50% 48%, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+}
+.bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.07;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  mix-blend-mode: overlay;
+}
+#products,
+#journey,
+.hero {
+  background: radial-gradient(ellipse 80% 55% at 50% 35%, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+}
+
+/* ---- Unify journey stage dots to dashboard gradients ---- */
+.stage.support .dot {
+  background: linear-gradient(160deg, #475569 0%, #CBD5E1 45%, #FFFFFF 100%);
+  color: #0f172a;
+  border-color: rgba(203, 213, 225, 0.55);
+}
+.stage.manage .dot {
+  background: linear-gradient(160deg, #7DD3FC 0%, #38BDF8 42%, #2563EB 100%);
+  color: #0b1220;
+  border-color: rgba(56, 189, 248, 0.55);
+}
+.stage.talk .dot {
+  background: linear-gradient(160deg, #CCFBF1 0%, #2DD4BF 45%, #115E59 100%);
+  color: #06231f;
+  border-color: rgba(17, 94, 89, 0.55);
+}
+.stage.play .dot {
+  background: linear-gradient(160deg, #00F0FF 0%, #8B5CF6 50%, #FF2EC8 100%);
+  color: #0b1020;
+  border-color: rgba(139, 92, 246, 0.55);
+}
+.stage.host .dot {
+  background: linear-gradient(160deg, #FEF3C7 0%, #FBBF24 35%, #F59E0B 65%, #92400E 100%);
+  color: #1c1005;
+  border-color: rgba(245, 158, 11, 0.55);
+}
+
+/* Stage bodies as glass panels */
+.stage-body {
+  position: relative;
+  background: var(--glass-fill);
+  backdrop-filter: blur(22px) saturate(1.7);
+  -webkit-backdrop-filter: blur(22px) saturate(1.7);
+  border: 1px solid var(--glass-border);
+  border-radius: 14px;
+  padding: 12px 16px 14px;
+  margin-bottom: 14px;
+  box-shadow: var(--glass-spec);
+  --mx: -9999px;
+  --my: -9999px;
+}
+.stage:last-child .stage-body { margin-bottom: 0; }
+
+/* ---- Glass surfaces ---- */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: color-mix(in srgb, #0d0f12 55%, rgba(255, 255, 255, 0.06));
+  backdrop-filter: blur(24px) saturate(1.7);
+  -webkit-backdrop-filter: blur(24px) saturate(1.7);
+  border-bottom-color: var(--glass-border);
+  box-shadow: var(--glass-spec);
+}
+.dropdown {
+  background: color-mix(in srgb, #141820 50%, rgba(255, 255, 255, 0.06));
+  backdrop-filter: blur(24px) saturate(1.7);
+  -webkit-backdrop-filter: blur(24px) saturate(1.7);
+  border-color: var(--glass-border);
+  box-shadow: var(--glass-spec), 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* Buttons and button-like controls: clear glass, no solid/tinted fills. */
+.btn,
+.btn-primary,
+.btn-secondary,
+.btn-amber,
+.nav-toggle,
+#site-nav a,
+#site-nav .menu-btn,
+#site-nav a.discord,
+.chip,
+.tag,
+.badge,
+.role-pill,
+.pdemo-flagbtn,
+.pdemo-quota,
+.builder-steps button,
+.builder-steps button.on,
+.pdemo-flag,
+.edemo-iconbtn,
+.edemo-linkbtn,
+.edemo-badge,
+.product-card a.tag-btn,
+.product-card .card-actions .btn,
+.product-card .btn-primary,
+.product-card .btn-secondary {
+  background: var(--glass-fill-btn) !important;
+  background-image: none !important;
+  backdrop-filter: blur(22px) saturate(1.75);
+  -webkit-backdrop-filter: blur(22px) saturate(1.75);
+  border: 1px solid var(--glass-border) !important;
+  box-shadow: var(--glass-spec);
+  color: var(--label) !important;
+}
+.btn-primary,
+.product-card .btn-primary,
+.product-card a.tag-btn,
+#site-nav a.discord {
+  background: var(--glass-fill-btn) !important;
+}
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-amber:hover,
+.product-card a.tag-btn:hover,
+#site-nav a.discord:hover,
+.chip:hover,
+#site-nav a:hover,
+#site-nav .menu-btn:hover,
+#site-nav a[aria-current="page"],
+#site-nav .menu-btn[aria-expanded="true"],
+.builder-steps button.on,
+.nav-toggle[aria-expanded="true"] {
+  border-color: var(--glass-border) !important;
+  background: rgba(255, 255, 255, 0.09) !important;
+  color: #ffffff !important;
+  box-shadow: var(--glass-spec);
+}
+#site-nav a:hover,
+#site-nav .menu-btn:hover,
+#site-nav a[aria-current="page"],
+#site-nav .menu-btn[aria-expanded="true"] {
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+.nav-toggle {
+  background: var(--glass-fill-btn) !important;
+}
+.builder-steps button.on {
+  color: var(--label) !important;
+}
+
+.path-card,
+.product-card,
+.builder-demo,
+.pdemo-stage,
+.edemo-panel,
+.choice,
+.prod-pick,
+.review-note,
+.pdemo-bubble,
+.pdemo-typing,
+.pdemo-sys,
+.edemo-card,
+.edemo-bubble,
+.edemo-composer,
+.tree,
+.pdemo-flag,
+.pdemo-cycler,
+.pdemo-quota {
+  background: var(--glass-fill) !important;
+  background-image: none !important;
+  backdrop-filter: blur(24px) saturate(1.75);
+  -webkit-backdrop-filter: blur(24px) saturate(1.75);
+  border-color: var(--glass-border) !important;
+  box-shadow: var(--glass-spec);
+}
+.tree {
+  background: color-mix(in srgb, #11151c 58%, rgba(255, 255, 255, 0.05));
+}
+.builder-demo {
+  background: rgba(255, 255, 255, 0.05);
+}
+.edemo-panel {
+  background: color-mix(in srgb, #161a21 50%, rgba(255, 255, 255, 0.06));
+}
+.edemo-top {
+  background: rgba(255, 255, 255, 0.05);
+}
+.pdemo-gate {
+  background: color-mix(in srgb, #0d0f12 60%, rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(22px) saturate(1.6);
+  -webkit-backdrop-filter: blur(22px) saturate(1.6);
+  box-shadow: var(--glass-spec);
+}
+.choice,
+.prod-pick,
+.pdemo-flag,
+.pdemo-cycler {
+  background: rgba(255, 255, 255, 0.055);
+  backdrop-filter: blur(20px) saturate(1.6);
+  -webkit-backdrop-filter: blur(20px) saturate(1.6);
+  border-color: var(--glass-border);
+  box-shadow: var(--glass-spec);
+}
+.lang-switch select,
+.pdemo-inrow input,
+.edemo-composer input,
+.edemo-composer textarea {
+  background: rgba(255, 255, 255, 0.055);
+  backdrop-filter: blur(16px) saturate(1.5);
+  -webkit-backdrop-filter: blur(16px) saturate(1.5);
+  border-color: var(--glass-border);
+  color: var(--label);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16);
+}
+.pdemo-inrow input:hover,
+.pdemo-inrow input:focus,
+.lang-switch select:hover,
+.lang-switch select:focus {
+  border-color: var(--glass-border);
+}
+
+
+.gl-surface { position: relative; }
+
+/* ---- Border-only cursor light: heading gradient ring, clipped by a 200px radial ---- */
+.gl-clip,
+.gl-light {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 6;
+}
+.gl-clip {
+  /* Proximity: only the ring near the cursor is visible. */
+  -webkit-mask-image: radial-gradient(var(--gl-radius) circle at var(--mx, -9999px) var(--my, -9999px), #000 0%, #000 28%, rgba(0,0,0,0.65) 52%, transparent 100%);
+  mask-image: radial-gradient(var(--gl-radius) circle at var(--mx, -9999px) var(--my, -9999px), #000 0%, #000 28%, rgba(0,0,0,0.65) 52%, transparent 100%);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+.gl-light {
+  padding: var(--gl-border-w);
+  background: conic-gradient(from 120deg at 50% 50%, var(--gl-1) 0deg, var(--gl-2) 130deg, var(--gl-3) 250deg, var(--gl-1) 360deg);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+[data-product="ensemble"] .gl-light,
+.edemo-root .gl-light,
+.stage.host .gl-light,
+.chip[href="ensemble.html"] .gl-light,
+.footer-links a[href="ensemble.html"] .gl-light,
+.dropdown a[href="ensemble.html"] .gl-light {
+  background: conic-gradient(from 120deg at 50% 50%, #FEF3C7 0deg, #FBBF24 90deg, #F59E0B 180deg, #92400E 270deg, #FEF3C7 360deg);
+}
+
+/* Form controls cannot host children. Border-box gradient faded by a radial layer. */
+.gl-self {
+  --mx: -9999px;
+  --my: -9999px;
+  --gl-fill: rgba(255, 255, 255, 0.06);
+  border: var(--gl-border-w) solid transparent !important;
+  background-color: transparent;
+  background-image:
+    linear-gradient(var(--gl-fill), var(--gl-fill)),
+    radial-gradient(var(--gl-radius) circle at var(--mx) var(--my), #fff 0%, #fff 22%, rgba(255,255,255,0.5) 48%, transparent 100%),
+    linear-gradient(90deg, var(--gl-1) 0%, var(--gl-2) 45%, var(--gl-3) 100%);
+  background-origin: border-box, border-box, border-box;
+  background-clip: padding-box, border-box, border-box;
+}
+
+/* Touch / reduced motion: static faint gradient ring, no tracking. */
+html.no-cursor .gl-clip,
+html.reduce-motion .gl-clip {
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+html.no-cursor .gl-light,
+html.reduce-motion .gl-light {
+  opacity: 0.4;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .gl-clip {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .gl-light { opacity: 0.4; }
+  .gl-self {
+    background-image:
+      linear-gradient(var(--gl-fill), var(--gl-fill)),
+      linear-gradient(90deg, var(--gl-1) 0%, var(--gl-2) 45%, var(--gl-3) 100%);
+    background-clip: padding-box, border-box;
+  }
+}
+html.no-cursor .gl-self,
+html.reduce-motion .gl-self {
+  background-image:
+    linear-gradient(var(--gl-fill), var(--gl-fill)),
+    linear-gradient(90deg, var(--gl-1) 0%, var(--gl-2) 45%, var(--gl-3) 100%);
+  background-clip: padding-box, border-box;
+}

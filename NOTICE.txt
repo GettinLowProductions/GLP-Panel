@@ -1,0 +1,5 @@
+GLP Server Panel
+
+The visual theme and cursor effect are from the Gettin' Low Productions website at https://playglp.com/.
+
+© Gettin' Low Productions

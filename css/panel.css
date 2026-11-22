@@ -1,0 +1,80 @@
+/* Page layout for the Server Panel site. Theme files are unchanged. */
+
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: 0;
+  z-index: 400;
+  padding: 10px 14px;
+  background: #161a21;
+  color: #f1f5f9;
+  text-decoration: none;
+  font-weight: 650;
+  border: 2px solid #2dd4bf;
+  border-radius: 10px;
+  transform: translateY(-140%);
+}
+
+.skip-link:focus {
+  transform: translateY(12px);
+}
+
+:focus-visible {
+  outline: 2px solid #2dd4bf;
+  outline-offset: 3px;
+}
+
+.hero-stat {
+  margin-top: 28px;
+}
+
+#download-version:not(:empty) {
+  margin-left: 0.45em;
+}
+
+.dl-count {
+  margin-top: 8px;
+  min-height: 1.4em;
+}
+
+.dl-count-num {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  letter-spacing: -0.04em;
+  color: #f1f5f9;
+  font-variant-numeric: tabular-nums;
+}
+
+.dl-count-unit {
+  color: #94a3b8;
+  font-size: 1rem;
+}
+
+.dl-note {
+  margin-top: 8px;
+  font-size: 0.92rem;
+}
+
+.card + .card {
+  margin-top: 16px;
+}
+
+.card h2,
+.card h3 {
+  margin-bottom: 8px;
+}
+
+.section .product-grid {
+  margin-top: 18px;
+}
+
+h1, h2, h3, p, li, a {
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 860px) {
+  .hero-stat {
+    margin-top: 22px;
+  }
+}

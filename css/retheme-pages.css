@@ -1,0 +1,198 @@
+/* retheme-pages.css — Addendum 3 supplement to shared v2b retheme.css.
+   Keeps v2b tokens and ring technique. Neutralizes leftover product/teal
+   fills and washes on the rest of the public site so glass stays clear.
+   Product color remains on the proximity border light only. */
+
+:root {
+  --line: rgba(255, 255, 255, 0.12);
+  --line-strong: rgba(255, 255, 255, 0.22);
+  --glass-fill: rgba(255, 255, 255, 0.055);
+  --glass-fill-btn: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --label: #f1f5f9;
+}
+
+/* Teal-free backdrop: soft multi-accent / dark, not a product wash. */
+.bg,
+.aurora-bg,
+.aurora,
+body > .bg {
+  background:
+    radial-gradient(ellipse 70% 50% at 12% 16%, rgba(148, 163, 184, 0.07) 0%, transparent 58%),
+    radial-gradient(ellipse 50% 42% at 88% 10%, rgba(139, 92, 246, 0.05) 0%, transparent 55%),
+    radial-gradient(ellipse 46% 38% at 70% 88%, rgba(245, 158, 11, 0.035) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 30% at 40% 70%, rgba(56, 189, 248, 0.03) 0%, transparent 60%),
+    #0d0f12 !important;
+}
+
+.site-header,
+header.site-header,
+body > nav,
+.nav-inner,
+#site-nav {
+  background: color-mix(in srgb, #0d0f12 82%, transparent) !important;
+  border-color: var(--glass-border) !important;
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+}
+
+/* Clear glass surfaces used across product, legal, and marketing pages. */
+.card,
+.price-card,
+.plan-card,
+.char-card,
+.path-card,
+.product-row,
+.feat,
+.feature,
+.usecase,
+.flow-step,
+.cmd-wrap,
+.tbl-wrap,
+.highlight-box,
+.warning-box,
+.callout,
+.legal-section,
+.doc,
+.server-card,
+.review-note,
+.beta-hero,
+.beta-banner,
+.login-wrap .card,
+.card2,
+.sheet,
+.rail,
+.drawer,
+.gtile,
+.od-stat,
+.billbox {
+  background: var(--glass-fill) !important;
+  background-image: none !important;
+  border: 1px solid var(--glass-border) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.10),
+    0 10px 30px rgba(0, 0, 0, 0.18) !important;
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  color: var(--label);
+}
+
+/* Buttons and button-like controls: drop solid/product fills. */
+.btn,
+.btn-primary,
+.btn-secondary,
+.btn-sm,
+.btn-teal,
+.btn-amber,
+.btn-gl,
+.btn-gl-chip,
+.btn-ghost,
+.nav-btn,
+.nav-toggle,
+.back-link,
+.go,
+.icon-btn,
+.ghost,
+.ghost-mini,
+.ghost-link,
+.primary,
+button.desk-tab,
+a.btn-discord,
+.menu-btn,
+input[type="submit"],
+input[type="button"],
+button:not(.gl-clip):not(.gl-light) {
+  background: var(--glass-fill-btn) !important;
+  background-image: none !important;
+  border: 1px solid var(--glass-border) !important;
+  color: var(--label) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.10) !important;
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  text-shadow: none;
+}
+.btn:hover,
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-sm:hover,
+.btn-teal:hover,
+.btn-amber:hover,
+.btn-gl:hover,
+.btn-ghost:hover,
+.go:hover,
+button:hover {
+  background: rgba(255, 255, 255, 0.09) !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+  color: var(--label) !important;
+}
+
+/* Inputs stay readable on dark glass. */
+select,
+input[type="text"],
+input[type="search"],
+input[type="password"],
+input[type="email"],
+textarea,
+.toc-filter,
+.lang-switch select,
+#lang-select {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid var(--glass-border) !important;
+  color: var(--label) !important;
+  backdrop-filter: blur(12px);
+}
+
+/* Do not glass-fill identity marks (logos, dots already handled in v2b). */
+.logo img, .brand-mark, .dot, .status-dot { background-image: unset; }
+
+/* Keep body text contrast. */
+body, .legal-body, .prose, .lede, p, li { color: var(--text, #f1f5f9); }
+.muted, .dim, .faint, .sub, .meta, .audience { color: #94a3b8; }
+
+/* Agent pages share the same clear glass. */
+.login-wrap, .wrap-page, .app, .screen, .dock, .bar {
+  /* structural only; cards/buttons already covered */
+}
+
+
+/* Hero wrappers are not slabs — only inner cards get glass. */
+.hero, .product-hero, .page-hero {
+  background: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Contain pre-existing wide docs sidebars / tables on small screens. */
+.aurora-bg, .bg, .aurora {
+  max-width: 100vw !important;
+  width: 100% !important;
+  left: 0 !important;
+  right: 0 !important;
+  overflow: hidden;
+}
+.tbl-wrap, .cmd-wrap, .cmd-table, table {
+  max-width: 100%;
+}
+.tbl-wrap, .cmd-wrap {
+  overflow-x: auto;
+}
+@media (max-width: 980px) {
+  html, body { overflow-x: hidden; }
+  aside.toc, .toc, .toc.gl-surface {
+    width: auto !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    left: auto !important;
+    right: auto !important;
+  }
+}
+
+/* Homepage heading rows use .wrap.center — not a glass slab. */
+.wrap.center, .center.wrap {
+  background: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
